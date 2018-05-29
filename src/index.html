@@ -6,18 +6,20 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
 <body>
-    <div id="div" style="background-color: red">
-        Block
-        <p>Paragraph</p>
-    </div>
+    <div id="div"><p>Paragraph</p></div>
+    <div id="div_2"></div>
+    <img src="1.jpg" alt="" />
+    <img src="2.png" alt="" />
+    <img src="3.png" alt="" /><br />
+
+    <a href="#">1</a>
+    <a href="#">2</a>
 
     <script type="text/javascript">
-        var block = $("#div").clone();
-        block.html("<p>New paragraph</p>");
-        block.css("font-size", "40px");
-        block.css("width", "200px");
+        $("div").append("<span>Simple text</span>");
+        $("img").appendTo($("#div_2"));
 
-        $("body").append(block);
+        $("a").wrap("<p style='display: none'></p>");
     </script>
 </body>
 </html>
