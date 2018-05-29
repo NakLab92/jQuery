@@ -6,16 +6,18 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
 <body>
-    <div id="div">
+    <div id="div" style="background-color: red">
         Block
         <p>Paragraph</p>
     </div>
 
     <script type="text/javascript">
-        alert($("#div").html());
-        alert($("#div").text());
+        var block = $("#div").clone();
+        block.html("<p>New paragraph</p>");
+        block.css("font-size", "40px");
+        block.css("width", "200px");
 
-        ($("p").html("<p>New paragraph</p>"));
+        $("body").append(block);
     </script>
 </body>
 </html>
