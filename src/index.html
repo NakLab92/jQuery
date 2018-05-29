@@ -6,18 +6,16 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 </head>
 <body>
-    <div id="div">Block</div>
+    <div id="div">
+        Block
+        <p>Paragraph</p>
+    </div>
 
     <script type="text/javascript">
-        $("#div").css("font-size", "25px");
-        $("#div").css("width", "250px");
-        $("#div").css("background-color", function () {
-            return "blue";
-        });
-        $("#div").css("height", function () {
-            var height = prompt("Enter height: ");
-            return height + "px";
-        });
+        alert($("#div").html());
+        alert($("#div").text());
+
+        ($("p").html("<p>New paragraph</p>"));
     </script>
 </body>
 </html>
