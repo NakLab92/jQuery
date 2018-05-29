@@ -8,10 +8,13 @@
     <script type="text/javascript">
         function valid() {
             var state = $("input[name='gender']:checked").val();
+            $("#message").show();
             if(!state)
                 return $("#message").html("<span style='color: red'>Specify your gender !</span><br /><br />");
-            alert(state);
+            $("#message").hide();
         }
+
+        var test = $("#menu ul li a, p");
     </script>
 </head>
 <body>
