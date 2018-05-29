@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <title>jQuery (practice)</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <style>
+        .div_1 {
+            background-color: #e07474;
+        }
+
+        .div_2 {
+            background-color: #b7f5a2;
+        }
+    </style>
 </head>
 <body>
-    <img src="1.jpg" class="img" alt="Image" title="Image" /><br />
-    <img src="2.jpg" /><br />
-    <img src="3.jpg" /><br />
-    <img src="4.jpg" alt="Image" title="Image" />
+    <div id="div">Text</div>
 
     <script type="text/javascript">
-        $(":not(img[alt])").attr("alt","jQuery"); /*$("img").not("img[alt]"); the same code */
-
-        var elements = $("img");
-        var text = "";
-        for (var i = 0; i < elements.length; i++)
-            text += elements[i].className + "\n";
-        alert(text);
+        var div = prompt("1 or 2 ?");
+        while (div != 1 && div != 2) {
+            alert("Please, enter number 1 or 2");
+            div = prompt("1 or 2 ?")
+        }
+        $("#div").attr("class", "div_" + div);
+        alert($("#div").get(0).className);
     </script>
 </body>
 </html>
